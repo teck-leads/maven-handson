@@ -1,0 +1,15 @@
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m-----------< [0;36mcom.techleasds.app:maven-exec-plugin-fibonacii[0;1m >-----------[m
+[[1;34mINFO[m] [1mBuilding maven-exec-plugin-fibonacii 0.0.1-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mexec-maven-plugin:1.6.0:java[m [1m(default-cli)[m @ [36mmaven-exec-plugin-fibonacii[0;1m ---[m
+0,2,3,5,13
+23
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  1.864 s
+[[1;34mINFO[m] Finished at: 2020-07-26T07:40:51+05:30
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
