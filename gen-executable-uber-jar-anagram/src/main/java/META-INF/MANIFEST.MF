@@ -1,0 +1,6 @@
+Main-Class: com.techleasds.app.GenExecutableUberJarAnagramApplication 
+Build-Number: 10 
+
+
+
+
