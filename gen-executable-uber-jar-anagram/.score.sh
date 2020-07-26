@@ -17,7 +17,7 @@ TEST_5=$(grep -io -e "junit" -e "gen-executable-uber-jar-anagram" -e "com.techle
 TEST_6=$(grep -io -e "<Build-Number>" -e "10" -e "<manifestEntries>" -e "<Main-Class>" pom.xml | wc -l);
 
 cd target;
-if [ -f gen-executable-uber-jar-anagram..jar ] 
+if [ -f gen-executable-uber-jar-anagram.jar ] 
 then 
 	jar xvf gen-executable-uber-jar-anagram.jar META-INF/MANIFEST.MF 2 > /dev/null;	
 	TEST_7=$(cat META-INF/MANIFEST.MF | grep -io -e "Main-Class: com.techleasds.app.GenExecutableUberJarAnagramApplication" -e "Build-Number: 10" | wc -l);

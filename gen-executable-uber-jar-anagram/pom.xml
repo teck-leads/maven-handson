@@ -28,8 +28,9 @@
 	</dependencies>
 
 	<build>
-		<!-- Set the jar filename as maven-anagram-finder -->
-		<finalName>gen-executable-uber-jar-anagram</finalName>
+		<!-- Set the jar filename -->
+		<finalName>${project.artifactId}</finalName>
+		<!-- <finalName>gen-executable-uber-jar-anagram</finalName> -->
 		<!-- Configure Shade plugin to generate an executable Uber jar. Add the 
 			below entries to MANIFEST.MF Main-Class: com.fresco.play.Anagram Build-Number: 
 			10 -->
