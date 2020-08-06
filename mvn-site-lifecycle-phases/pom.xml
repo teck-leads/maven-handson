@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.techleads.app</groupId>
+	<artifactId>mvn-site-lifecycle-phases</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>mvn-site-lifecycle-phases</name>
+	<description>Demo project for Spring Boot</description>
+
+	<properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.13</version>
+			<scope>test</scope>
+		</dependency>
+
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.6.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+
+			<plugin>
+
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<version>1.8</version>
+				<executions>
+					<execution>
+						<id>id.pre-site</id>
+						<phase>pre-site</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<tasks>
+								<echo>pre-site phase</echo>
+								<echo>Artifact ID: ${project.artifactId}</echo>
+							</tasks>
+						</configuration>
+					</execution>
+					<execution>
+						<id>id.site</id>
+						<phase>site</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<tasks>
+								<echo>site phase</echo>
+								<echo>Artifact ID: ${project.artifactId}</echo>
+							</tasks>
+						</configuration>
+					</execution>
+					<execution>
+						<id>id.post-site</id>
+						<phase>post-site</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<tasks>
+								<echo>post-site phase</echo>
+								<echo>Artifact ID: ${project.artifactId}</echo>
+							</tasks>
+						</configuration>
+					</execution>
+					<execution>
+						<id>id.site-deploy</id>
+						<phase>site-deploy</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<tasks>
+								<echo>in site-deploy phase</echo>
+								<echo>Artifact ID: ${project.artifactId}</echo>
+							</tasks>
+						</configuration>
+					</execution>
+				</executions>
+
+
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-site-plugin</artifactId>
+				<version>3.7.1</version>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-project-info-reports-plugin</artifactId>
+				<version>3.0.0</version>
+			</plugin>
+		</plugins>
+		<extensions>
+			<extension>
+				<groupId>org.apache.maven.wagon</groupId>
+				<artifactId>wagon-webdav-jackrabbit</artifactId>
+				<version>3.3.2</version>
+
+
+			</extension>
+		</extensions>
+	</build>
+	<distributionManagement>
+		<site>
+			<id>site.deployments</id>
+			<name>Site deployments</name>
+			<url>dav:http://192.168.1.7/sites/${project.artifactId}/</url>
+		</site>
+	</distributionManagement>
+
+</project>
